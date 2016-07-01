@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		var result = 0;
+
+		function AskQuestion(textBoxId, answer)
+		{
+			var userAnswer = document.getElementById(textBoxId).value;
+			if(userAnswer == answer)
+				result++;
+
+		}
+
+		function AskQuestions()
+		{
+			AskQuestion("userAnswer1", "капуста");
+			AskQuestion("userAnswer2", "елка");
+		
+
+			if(result == 2)
+				alert('Вы угадали все загадки')	;
+			else if(result == 1)
+				alert('Вы угадали только одну загадку')	;
+			else 
+				alert('Вы ничего не угадали');
+		}		
+
+		/*function AskQuestions()
+		{
+			var userAnswer = document.getElementById("userAnswer1").value;
+			var result = 0;
+			if(userAnswer == "капуста")
+				result++;
+
+			userAnswer = document.getElementById("userAnswer2").value;
+			if(userAnswer == "елка")
+				result++;
+			
+
+			if(result == 2)
+				alert('Вы угадали все загадки')	;
+			else if(result == 1)
+				alert('Вы угадали только одну загадку')	;
+			else 
+				alert('Вы ничего не угадали');
+		}*/
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="#">Загадки</a><span>/</span>
+		<a href="#">Угадайка</a><span>/</span>
+		<a href="#">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">	
+		<h3>Игра в загадки</h3>			
+	    <div id="box">
+	    	<h5>Отгадай загадки!</h5>
+	    	<p>Сто одежек, и все без застежек</p>
+	    	<input type="text" id="userAnswer1">
+
+            <p>Зимой и летом одним цветом</p>
+            <input type="text" id="userAnswer2">
+
+            <br><br/>
+            <a href="#" onclick="AskQuestions();">Отправить</a>
+	    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
